@@ -1,0 +1,180 @@
+
+/* CSS DESAFIO GITHUB*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: linear-gradient(135deg, rgba(184,198,223,1) 0%,rgba(109,136,183,1) 100%);
+}
+.contenedor{
+	max-width: 1200px;
+	margin: auto; /* lo mantenemos al medio*/
+}
+#header{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#header .barNav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	background-color: rgb(239,227,175, .8);
+	border-radius: 0 0 50px 50px;
+	transition: all 250ms ease-in-out;
+}
+
+#header .barNav:hover{
+	background-color: rgb(128,128,255, 8);
+	color: #fff;
+	height: 110px;
+}
+#header .barNav .logo{
+	flex-basis: 180px;
+	padding-left: 50px;
+}
+
+#header .barNav .logo img{
+	width: 100%;
+	max-width: 180px;
+	display: block;
+}
+
+#header .barNav .menu{
+	flex-grow: 1;
+}
+
+#padre{
+	padding-top: 150px; /* ubicacion de arriba hacia abajo*/
+	display:  grid;
+	grid-template-areas:
+	"uno"
+	"dos"
+	"tres"
+	"cuatro";
+	grid-gap: 2rem;
+	width: 90%;
+	min-height: 100vh;
+	margin: auto;
+}
+@keyframes aumenta {
+	from{
+		transform: scale(1,1);
+	}
+	to{
+		transform: scale(1.1,1.1);
+	}
+}
+.uno{
+	grid-area: uno;
+}
+
+.uno .anima {
+	height: auto;
+	object-fit: cover;
+	overflow: hidden;
+	width: 100%;
+	display: block;
+	animation-name: aumenta;
+	animation-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
+	animation-delay: 0;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+.dos{
+	grid-area: dos;
+}
+
+.dos img{
+	width: 364px;
+	height: auto;
+}
+.dos .rotacion:hover{
+	transform: rotateZ(45deg);
+}
+
+@keyframes utilAnima{
+	0%{
+		background-position: 5% 0%;
+	}
+	50%{
+		background-position: 96% 100%;
+	}
+	100%{
+		background-position: 5% 0%;
+	}
+}
+
+.tres{
+	grid-area: tres;
+	transition: all 250ms ease-in-out;
+	animation:  utilAnima 2s linear infinite;
+	background: linear-gradient(45deg,  rgba(164,179,87,1) 0%,rgba(234,61,18,1) 15%,rgba(229,229,11,1) 31%,rgba(28,198,9,1) 50%,rgba(19,0,198,1) 65%,rgba(229,0,237,1) 82%,rgba(117,137,12,1) 100%);
+	background-size: 1000% 1000%;
+}
+.escala:hover{
+	transform: scale(1.1);
+}
+.cuatro{
+	grid-area: cuatro;
+}
+.uno, .dos, .tres,.cuatro{
+	padding: 1rem;
+}
+.bgColorGrey{
+	background-color: #ccc;
+}
+.borders{
+	border:1px solid #000;
+	border-radius: 1.5rem;
+}
+
+/* PELOTITA */
+
+@keyframes efecto {
+	0%{
+		top: 150px;
+	}
+	50%{
+		top: 93%;
+	}
+	100%{
+		top: 150px;
+	}
+}
+
+.pelotita{
+	position: absolute;
+	top: 150px;
+	margin-left: 60px;
+	width: 40px;
+	height: 40px;
+	border-radius: 100px;
+	background: radial-gradient(ellipse at center,  rgba(254,204,177,1) 0%,rgba(241,116,50,1) 50%,rgba(234,85,7,1) 51%,rgba(251,149,94,1) 100%);
+	animation-name: efecto;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-delay: 1s;
+}
+
+@media all and (min-width: 768px){
+	body {
+		background: linear-gradient(135deg, rgba(184,225,252,1) 0%,rgba(169,210,243,1) 14%,rgba(144,186,228,1) 25%,rgba(144,188,234,1) 27%,rgba(144,188,234,1) 37%,rgba(144,191,240,1) 50%,rgba(107,168,229,1) 51%,rgba(162,218,245,1) 77%,rgba(189,243,253,1) 100%);
+	}
+	#padre{
+		grid-template-areas: 
+		"uno dos cuatro"
+		"uno tres cuatro";
+		grid-auto-columns: 365px;
+		width: 80%;
+	}
+
+}

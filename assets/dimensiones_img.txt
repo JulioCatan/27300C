@@ -1,0 +1,3 @@
+logo_torta 156 x 135 px
+imagen_uno: 644 x 729 px
+imagen_dos: 644 x 420 px
