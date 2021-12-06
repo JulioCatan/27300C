@@ -1,5 +1,5 @@
 
-/* CSS DESAFIO GITHUB*/
+/* CSS DESAFIO GITHUB */
 *{
 	margin: 0;
 	padding: 0;
@@ -12,6 +12,7 @@ body {
 	max-width: 1200px;
 	margin: auto; /* lo mantenemos al medio*/
 }
+/* ENCABEZADO*/
 #header{
 	position: fixed;
 	z-index: 1000;
@@ -49,7 +50,7 @@ body {
 #header .barNav .menu{
 	flex-grow: 1;
 }
-
+/* CONTENIDO */
 #padre{
 	padding-top: 150px; /* ubicacion de arriba hacia abajo*/
 	display:  grid;
@@ -74,7 +75,7 @@ body {
 .uno{
 	grid-area: uno;
 }
-
+/* ANIMACION DE IMAGENES*/
 .uno .anima {
 	height: auto;
 	object-fit: cover;
@@ -88,6 +89,7 @@ body {
 	animation-iteration-count: infinite;
 	animation-fill-mode: forwards;
 }
+/* TRANSFORM*/
 .dos{
 	grid-area: dos;
 }
@@ -99,7 +101,7 @@ body {
 .dos .rotacion:hover{
 	transform: rotateZ(45deg);
 }
-
+/* ANIMACION DE COLORES*/
 @keyframes utilAnima{
 	0%{
 		background-position: 5% 0%;
