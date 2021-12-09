@@ -98,9 +98,9 @@ body {
 	width: 364px;
 	height: auto;
 }
-.dos .rotacion:hover{
+/*.dos .rotacion:hover{
 	transform: rotateZ(45deg);
-}
+}*/
 /* ANIMACION DE COLORES*/
 @keyframes utilAnima{
 	0%{
